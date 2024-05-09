@@ -23,3 +23,15 @@ console.log(headingElement)
 //3.Text
 // -InnerText & textContent Propert
 console.log(headingElement.innerText)
+// DOM style
+var styleDom = document.querySelector('.styless')
+styleDom.style.width = '100px'
+styleDom.style.height = '200px'
+styleDom.style.backgroundColor = 'red'
+// Or
+var styleDom2 = document.querySelector('.styles2')
+Object.assign(styleDom2.style, {
+    width: '100px',
+    height: '200px',
+    backgroundColor: 'yellow'
+})
