@@ -12,4 +12,7 @@ var box1 = document.querySelector('.box-1')
 var li = box1.querySelectorAll('li')
 console.log(li)
 //2 Attributw
+var headingElement = document.querySelector('h1')
+headingElement.className = "heading"
+console.log(headingElement)
 //3.Text
