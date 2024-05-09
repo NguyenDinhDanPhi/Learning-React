@@ -11,8 +11,15 @@ console.log(querySelectorChildLast)
 var box1 = document.querySelector('.box-1')
 var li = box1.querySelectorAll('li')
 console.log(li)
+// innerHTML vs outerHTML
+box1.innerHTML = "<span>Test InnerHTML</span>"
+
+
 //2 Attributw
 var headingElement = document.querySelector('h1')
 headingElement.className = "heading"
+headingElement.style = 'color: red'
 console.log(headingElement)
 //3.Text
+// -InnerText & textContent Propert
+console.log(headingElement.innerText)
