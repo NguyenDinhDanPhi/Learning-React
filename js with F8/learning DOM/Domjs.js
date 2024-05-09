@@ -35,3 +35,9 @@ Object.assign(styleDom2.style, {
     height: '200px',
     backgroundColor: 'yellow'
 })
+// ClassList Property
+var classListElement = document.querySelector('.classList')
+classListElement.classList.add('red')
+setTimeout(() => {
+    classListElement.classList.remove('red')
+},3000)
