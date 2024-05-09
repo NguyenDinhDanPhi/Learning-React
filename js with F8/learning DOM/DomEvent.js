@@ -10,4 +10,17 @@ for(i = 0; i < h1Element2.length; i++) {
         console.log(e.target)
     }
 }
-// 2. Assign even using the element node
+// 1.1 Input/Select
+var inputElement = document.querySelector('input[type="text"]')
+inputElement.oninput = (e) => {
+    console.log(e.target.value)
+}
+
+var inputElement2 = document.querySelector('input[type="checkbox"]')
+inputElement2.onchange = (e) => {
+    console.log(e.target.checked)
+}
+// 1.2 Key up/down
+inputElement.onkeydown = (e) => {
+    console.log(e.target)
+}
