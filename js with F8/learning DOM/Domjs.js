@@ -38,6 +38,6 @@ Object.assign(styleDom2.style, {
 // ClassList Property
 var classListElement = document.querySelector('.classList')
 classListElement.classList.add('red')
-setTimeout(() => {
-    classListElement.classList.remove('red')
-},3000)
+setInterval(() => {
+    classListElement.classList.toggle('red')
+},1000)
