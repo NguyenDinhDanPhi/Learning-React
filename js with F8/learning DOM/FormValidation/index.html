@@ -50,10 +50,18 @@
             form: '#form-1',
             errSelector: '.form-message',
             rules: [
-                 Validator.minLen('#password', 6),
+            Validator.isRequire('#password'),
+                Validator.minLen('#password', 6),
                 Validator.isRequire('#fullname'),
+                Validator.isRequire('#email'),
                 Validator.isEmail('#email'),
-            ]
+                Validator.isComfirmed('#password_confirmation', function () {
+                    return document.querySelector('#form-1 #password').value
+                }, 'Mat Khau Khong Chinh Xac')
+            ],
+            onSubmit: function(data) {
+                console.log(data)
+            }
         })
     </script>
 </body>
