@@ -30,3 +30,8 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+.header_navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
