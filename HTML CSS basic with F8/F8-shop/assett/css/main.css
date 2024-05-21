@@ -24,9 +24,19 @@
     font-weight: 300;
 }
 
-.header__navbar-item:hover,.header__navbar-time-link:hover {
+.header__navbar-item:hover,
+.header__navbar-time-link:hover 
+.header_navbar-icon-link:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-item, 
+.header__navbar-time-link ,
+.header__navbar-icon-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 10px;
 }
 
 .header__navbar-item--strong {
@@ -43,3 +53,14 @@
     right: -9px;
     transform: translateY(-50%); 
 } 
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+    
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
