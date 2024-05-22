@@ -103,7 +103,7 @@
     top: 100%;
     right: 0;
     width: 404px;
-    margin-top: 5px;
+    margin-top: 15px;
     border: 1px solid #d3d3d3;
     background-color: var(--white-color);
     cursor: default;
@@ -111,6 +111,26 @@
     animation: headerNotifyGrow ease-in 0.2s;
     display: none;
 }
+
+.header__notify::after {
+    content: "";
+    border-width: 20px 30px ;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+.header__notify::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -17px;
+    width: 90px;
+    height: 20px;
+}
+
 .header__notify-header {
     height: 40px;
     background-color: var(--white-color);  
