@@ -334,6 +334,7 @@
     height: var(--header-with-search-hieght);
     display: flex;
     align-items: center;
+    margin: 0 8px;
 }
 
 .header__logo {
@@ -350,6 +351,8 @@
     height: 40px;
     border-radius: 2px;
     background-color: var(--white-color);
+    display: flex;
+    align-items: center;
 }
 
 .header_cart {
@@ -361,6 +364,103 @@
     font-size: 2.6rem;
     color: var(--white-color);
 
+}
+
+.header_search-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 0 16px;
+    border-radius: 3px;
+
+}
+
+.header_search-select {
+    border-left: 1px solid #e8e8e8;
+    padding-left: 16px;
+    position: relative;
+}
+
+.header_search-select:hover .header__search-option {
+    display: block;
+}
+
+
+.header_search-select::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    right: 0;
+    top: 18px;
+}
+
+.header_search-select-label {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.header_search-select-icon{
+    font-size: 1.4rem;
+    color: #4a4a4a;
+    margin: 0 16px 0 8px;
+}
+
+.header_search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    width: 60px;
+    height: 34px;
+    border-radius: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.header_search-btn-icon {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.header_search-btn:hover {
+    background-color: #ec593c ;
+}
+
+.header__search-option {
+    position: absolute;
+    right: 0;
+    top: 150%;
+    width: 130px;
+    list-style: none;
+    box-shadow: 0 1px 2px #ccc;
+    padding-left: 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.header__search-option-item {
+    background-color: var(--white-color);
+    padding: 8px 8px;
+    text-align: right;
+    animation: fadeIn ease-in 0.1s;
+}
+
+.header__search-option-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.header__search-option-item span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.header__search-option-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0 4px 0 12px;
 }
 
  /* Animation */
