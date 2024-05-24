@@ -84,7 +84,12 @@ var promiseB = new Promise( (resolve, reject) => {
     }, 5000);
 })
 
-Promise.all([promiseA, promiseB])
+var promiseC = Promise.reject("co loi")
+
+Promise.all([promiseA, promiseB, promiseC])
         .then((result) => {
-            console.log(result)
+            console.log(result[0].concat(result[1]))
+        })
+        .catch((err) => {
+            console.log(`promise.all err ${err}`)
         })
