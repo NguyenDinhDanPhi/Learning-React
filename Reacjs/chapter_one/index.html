@@ -9,6 +9,8 @@
 </head>
 <body>
     <div id="root"></div>
+    <div id="root2"></div>
+
     <script>
         // React dom 
         const h1ReactDom = React.createElement('h1', {
@@ -41,8 +43,14 @@
 
         // React - get root element
         const root = document.getElementById('root');
-        // ReactDOM - render UI
+        // ReactDOM - render UI @17
         ReactDOM.render(postItem, root);
+        // ReactDOM @18
+        const container = document.getElementById('root2');
+        const root2 = ReactDOM.createRoot(container)
+        root2.render(postItem);
+
+
     </script>
 </body>
 </html>
