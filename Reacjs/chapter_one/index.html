@@ -8,23 +8,9 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
+    <div id="root"></div>
     <script>
-        //Dom 
-        const h1DOm = document.createElement('h1');
-        h1DOm.title = 'Hello'
-        h1DOm.className = 'heading';
-        h1DOm.innerText = 'Hello guys!';
-        document.body.appendChild(h1DOm);
-
-        const ulDom = document.createElement('ul');
-        const liDom1 = document.createElement('li');
-        liDom1.innerText = "Javascript"
-        const liDom2 = document.createElement('li');
-        liDom2.innerText = "React"
-        ulDom.appendChild(liDom1);
-        ulDom.appendChild(liDom2);
-        document.body.appendChild(ulDom);
-        //reat dom 
+        // React dom 
         const h1ReactDom = React.createElement('h1', {
             title: 'Hello',
             className: 'heading'
@@ -34,6 +20,29 @@
             React.createElement('li', null, 'Javascript'),
             React.createElement('li', null, 'React')
         );
+
+        const postItem = React.createElement(
+            'div', 
+            {
+                className: 'post-item'
+            }, 
+            React.createElement(
+                'h2',
+                {
+                    title: 'learing react with me'
+                },
+                'Learing React with me'),
+            React.createElement(
+                'p',
+                 null,
+                'I am learning react from basic to advanced'
+                )
+            );
+
+        // React - get root element
+        const root = document.getElementById('root');
+        // ReactDOM - render UI
+        ReactDOM.render(postItem, root);
     </script>
 </body>
 </html>
