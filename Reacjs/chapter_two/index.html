@@ -1,0 +1,25 @@
+<!-- JSX with bable -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+    <script type="text/babel">
+        const reactCourse = "ReactJS F8";
+        const ul = <ul>
+        <li>ReactJS</li>
+        <li>javascript</li>
+    </ul>;
+
+        ReactDOM.render(ul,document.getElementById("root"));
+    </script>
+</body>
+</html>
