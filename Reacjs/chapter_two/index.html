@@ -13,13 +13,34 @@
     
     <div id="root"></div>
     <script type="text/babel">
+        const courses = [
+            {
+                name: "HTML, CSS"
+            },
+            {
+                name: "Reponstive web design"
+            },
+            {
+                name: "ReactJS"
+            },
+        ]
+
+        const jsx = [
+            <ul> 
+                {
+                    courses.map(course => <li>{course.name}</li>)
+                }    
+            </ul>
+        ]
+        ReactDOM.render(jsx,document.getElementById("root"));
+
         const reactCourse = "ReactJS F8";
         const ul = <ul>
         <li>ReactJS</li>
         <li>javascript</li>
     </ul>;
 
-        ReactDOM.render(ul,document.getElementById("root"));
+       // ReactDOM.render(ul,document.getElementById("root"));
     </script>
 </body>
 </html>
