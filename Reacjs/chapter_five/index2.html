@@ -1,0 +1,58 @@
+<!-- Tạo Components | Làm việc với JSX - Phần 2  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const Form =  {
+            Input() {
+                return (
+                    <input type="text" />
+                )
+            },
+            Checkbox() {
+                return <input type="checkbox" />
+            }
+        }
+
+        function Button({title, href, onClick}) {
+            let Component = 'button';
+            const props = {}
+            if(onClick) {
+                props.onClick = onClick;
+            }
+            if(href) {
+                props.href = href
+                Component = 'a';
+            }
+            return (
+                <Component {...props}>{title}</Component>
+            )
+        }
+
+        function App() {
+            const type = 'Input';
+            const Component = Form[type];
+            return (
+                <div className="wrapper">
+                   <Component />
+                   <Button
+                        title= "Click me!"
+                        href= "https://www.facebook.com/profile.php?id=100032022931572"
+                        onClick={() => console.log(Math.random())} />
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
