@@ -1,8 +1,8 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 function UseRefDemo() {
     const [count, setCount] = useState(60)
 
-    let timerId = useRef()
+    let timerId = useRef(99)
     const preCount = useRef()
     useEffect(() => {
          preCount.current = count

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Content from './Content'
 import FakeChatApp from './FakeChatApp';
 import UseRefDemo from './UseRefDemo';
+import ReactMemo from './ReactMemo';
 function App() {
   const [counter, setCounter] = useState(0);
   const handlerInterceptor = () => {
@@ -24,6 +25,7 @@ function App() {
         {show && <Content />}
         <FakeChatApp /> <br/> 
         <UseRefDemo /> 
+        <ReactMemo />
 
     </div>
   );
