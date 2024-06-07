@@ -10,8 +10,9 @@ function Content() {
     //3. useEffect(callback, [deps])
 
 // ----------------------------------------------------------------
-    //1. callbacks luôn được gọi sau khi component mount
-    //2. cleanUp funcion luon duoc goi truoc khi component unmount
+    // 1. callbacks luôn được gọi sau khi component mount
+    // 2. cleanUp funcion luôn được gọi trước khi component unmount
+    // 3. cleanUp funcion luôn được gọi trước khi callback được gọi (trừ lần mounted)
     const tabs = ["posts","comments", 'albums']
     const [title, setTitle] = useState('')
     const [posts, setPosts] = useState([])
@@ -37,11 +38,29 @@ function Content() {
         window.removeEventListener('scroll', handlerScroll)
         }    
     }, [])
+    //  ----------------------------------------------------------------
+    const [avatar, setAvatar] = useState()
+    useEffect(() => {
+        return () => {
+           avatar && URL.revokeObjectURL(avatar.preview)
+        }
+    }, avatar)
+    const handlerAvatar = (e) => {
+        const file = e.target.files[0]
+        file.preview = URL.createObjectURL(file)
+        setAvatar(file)
+    }
     return (
         <div>
            
             <input value={title} onChange={e => setTitle(e.target.value)} />
             <br/> <br />
+            <input type="file" onChange={handlerAvatar} /> 
+            {avatar && (
+                <img src={avatar.preview} alt="avatar" />
+            )}
+            <br /> <br />
+
             {tabs.map(tab => (
                 <button 
                 style={type === tab ? {
@@ -74,6 +93,7 @@ function Content() {
                     Go to Top
                 </button>
             )}
+            
         </div>
         
     );
