@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Content from './Content'
 import FakeChatApp from './FakeChatApp';
+import UseRefDemo from './UseRefDemo';
 function App() {
   const [counter, setCounter] = useState(0);
   const handlerInterceptor = () => {
@@ -21,7 +22,9 @@ function App() {
         <br/> <br />
         <button onClick={() => {setShow(!show)}}>Toggle</button>
         {show && <Content />}
-        <FakeChatApp />
+        <FakeChatApp /> <br/> 
+        <UseRefDemo /> 
+
     </div>
   );
 }

@@ -15,9 +15,7 @@ function emitCommnet(id) {
       )
     }, 2000)
 }
-emitCommnet(1)
-emitCommnet(2)
-emitCommnet(3)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
