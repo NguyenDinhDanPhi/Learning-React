@@ -1,9 +1,10 @@
 import {memo} from "react"
-function ContentDemo({count}) {
+function ContentDemo({onIncrease}) {
     console.log("re-render")
     return (
         <div>
-            ContentDemo {count}
+            ContentDemo
+            <button onClick={onIncrease}>Increase</button>
         </div>
     )
 }

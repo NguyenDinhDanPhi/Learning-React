@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Content from './Content'
-import FakeChatApp from './FakeChatApp';
-import UseRefDemo from './UseRefDemo';
-import ReactMemo from './ReactMemo';
+import Content from './tutorial/Content'
+import FakeChatApp from './tutorial/FakeChatApp';
+import UseRefDemo from './tutorial/UseRefDemo';
+import ReactMemo from './tutorial/ReactMemo';
 function App() {
   const [counter, setCounter] = useState(0);
   const handlerInterceptor = () => {
