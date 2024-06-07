@@ -4,6 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// FAKE COMMENT
+
+function emitCommnet(id) {
+    setInterval(() => {
+      window.dispatchEvent(
+        new CustomEvent(`lesson ${id}`, {
+          detail: `Nội dung cmt là của lesson ${id}`
+        })
+      )
+    }, 2000)
+}
+emitCommnet(1)
+emitCommnet(2)
+emitCommnet(3)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
